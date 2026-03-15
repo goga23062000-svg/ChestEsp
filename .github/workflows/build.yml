@@ -1,6 +1,7 @@
 name: build
 
-on: [push]
+on:
+ push:
 
 jobs:
  build:
@@ -20,3 +21,9 @@ jobs:
 
    - name: Build
      run: gradle build
+
+   - name: Upload jar
+     uses: actions/upload-artifact@v4
+     with:
+      name: ChestESP
+      path: build/libs/*.jar
