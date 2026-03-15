@@ -15,5 +15,8 @@ jobs:
       distribution: temurin
       java-version: 8
 
+   - name: Install Gradle
+     uses: gradle/gradle-build-action@v2
+
    - name: Build
-     run: ./gradlew build
+     run: gradle build
